@@ -1,0 +1,78 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.left-pane {
+  height: 100vh;
+  width: 400px;
+  float: left;
+  padding: 20px;
+  background: #eee;
+}
+
+.right-pane {
+  height: 100vh;
+  width: calc(100% - 400px);
+}
+
+.query-form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  display: block;
+  margin-top: 0;
+  font-size: 22px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 400px;
+  font-family: monospace;
+  padding: 10px;
+  margin-top: 15px;
+  display: block;
+}
+
+button {
+  margin-top: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 30px;
+  background: #444;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  float: right;
+}
+
+.json-response {
+  margin-top: 10px;
+  display: block;
+  min-height: 200px;
+  background: #fafafa;
+  word-break: break-all;
+  font-size: 10px;
+  font-family: monospace;
+  padding: 10px;
+}

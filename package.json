@@ -1,0 +1,17 @@
+{
+  "name": "gremlin-orm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "lint": "node test/lint.js server/server.js assets/js/index.js",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "gremlin-orm": "^1.1.0",
+    "path": "^0.12.7"
+  }
+}

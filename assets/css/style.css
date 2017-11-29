@@ -92,3 +92,7 @@ button {
   font-family: monospace;
   padding: 10px;
 }
+
+.CodeMirror {
+  font-size: 12px;
+}

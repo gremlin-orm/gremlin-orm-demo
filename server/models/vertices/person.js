@@ -5,14 +5,11 @@ const Person = g.define('person', {
     type: g.STRING,
     required: true
   },
-  age: {
+  cohort: {
     type: g.NUMBER
   },
-  dob: {
-    type: g.DATE
-  },
-  educated: {
-    type: g.BOOLEAN
+  status: {
+    type: g.STRING,
   }
 });
 

@@ -7,6 +7,9 @@ const queryController = require('./controllers/queryController');
 
 const app = express();
 
+const staticPath = path.resolve(__dirname, "assets");
+app.use(express.static(staticPath));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -18,6 +21,10 @@ app.use(function(req, res, next) {
   }
   else if (req.url.match(/.js$/)) {
     res.header("Content-Type", "application/javascript");
+    res.sendFile(path.join(__dirname + '/..' + req.url));
+  }
+  else if (req.url.match(/.png$/)) {
+    res.header("Content-Type", "image/png");
     res.sendFile(path.join(__dirname + '/..' + req.url));
   }
   else {

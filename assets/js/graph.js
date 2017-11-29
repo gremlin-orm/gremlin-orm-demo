@@ -15,7 +15,7 @@ const initialiseGraph = (data) => {
       },
       { 
         selector: 'edge',
-        style: { 'content': 'data(label)' }
+        style: { 'content': 'data(label)', 'width': 2 }
       }
     ]
   }); 
@@ -85,7 +85,7 @@ const initialiseGraph = (data) => {
     }
   }
 
-  var layout = cy.layout(layoutOptions.cose);
+  var layout = cy.layout(layoutOptions.breadthFirst);
 
   layout.run();
 }

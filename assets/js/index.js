@@ -14,7 +14,10 @@ $(document).ready(function() {
   }
 
   function error(err) {
-    console.log("err", err);
+    if (err.status === 0) {
+      $('#json-response').html('');
+      return;
+    }
     let errorStr = `<h4> Error ${err.status}</h4><br>`;
     const errors = err.responseJSON;
     if (errors) {

@@ -1,7 +1,7 @@
 
 const initialiseGraph = (data) => {
   
-  const resultData = data[0];
+  let resultData = data[0];
   console.log("resultData", resultData);
   const vertexData = data[1][0];
   const edgeData = data[2][1];
@@ -19,7 +19,6 @@ const initialiseGraph = (data) => {
       }
     ]
   }); 
-    console.log("modelStyles", modelStyles);
 
   vertexData.forEach((vertex) => {
     cy.add({ data: vertex, style: modelStyles[vertex.label] });
@@ -32,6 +31,9 @@ const initialiseGraph = (data) => {
     cy.add( {data: edgeElem, style: modelStyles[edgeElem.label] } );
   });
 
+  if (!Array.isArray(resultData)) {
+    resultData = [ resultData ];
+  }
   resultData.forEach((resultItem) => {
     const elem = cy.getElementById(resultItem.id);
     if (resultItem.inV && resultItem.outV) {

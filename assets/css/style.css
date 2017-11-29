@@ -15,6 +15,11 @@ body {
   outline: none;
 }
 
+#container {
+  width: calc(100vw - 400px);
+  height: 100vh;
+}
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -31,6 +36,7 @@ body {
 }
 
 .right-pane {
+  float: right;
   height: 100vh;
   width: calc(100% - 400px);
 }

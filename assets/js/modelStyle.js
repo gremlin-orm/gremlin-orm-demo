@@ -12,7 +12,7 @@ const modelStyles = {
     'background-color': '#E7707F'
   },
   create: {
-    'width': '3px', 
+    'width': '2', 
     'line-color': '#1A1A0F'
   },
   cocreate: {
@@ -28,6 +28,6 @@ const modelStyles = {
     'border-style' : 'solid'   
   },
   resultEdge: {
-    'width': '8px',  
+    'width': '4',  
   }          
 };

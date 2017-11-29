@@ -8,8 +8,7 @@ $(document).ready(function() {
                                            });
 
   function success(data) {
-    $('#json-response').html(JSON.stringify(data[0]));
-
+    $('#json-response').html(JSON.stringify(data[0], null, 2));
 
 
   }

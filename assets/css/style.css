@@ -30,6 +30,15 @@ body {
   background: #eee;
 }
 
+#logo {
+  height: 10%;
+  width: auto;
+}
+
+#header {
+  margin-bottom: 25px;
+}
+
 .right-pane {
   height: 100vh;
   width: calc(100% - 400px);
@@ -46,10 +55,15 @@ h1, h2 {
   font-size: 22px;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 textarea {
   width: 100%;
-  min-height: 400px;
+  min-height: 200px;
   font-family: monospace;
+  font-size: 16px;
   padding: 10px;
   margin-top: 15px;
   display: block;
@@ -71,7 +85,8 @@ button {
   margin-top: 10px;
   display: block;
   min-height: 200px;
-  background: #fafafa;
+  background: #fff;
+  border: 2px solid #999;
   word-break: break-all;
   font-size: 12px;
   font-family: monospace;

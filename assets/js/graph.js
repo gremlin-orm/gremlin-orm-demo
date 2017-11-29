@@ -15,7 +15,7 @@ const initialiseGraph = (data) => {
       },
       { 
         selector: 'edge',
-        style: { 'content': 'data(label)', 'width': 2 }
+        style: { 'content': 'data(label)' }
       }
     ]
   }); 
@@ -28,7 +28,7 @@ const initialiseGraph = (data) => {
     const edgeElem = Object.assign({}, edge);
     edgeElem.source = edge.outV;
     edgeElem.target = edge.inV;   
-    cy.add( {data: edgeElem, style: modelStyles[edgeElem.label] } );
+    cy.add({ data: edgeElem, style: modelStyles[edgeElem.label] });
   });
 
   if (!Array.isArray(resultData)) {
@@ -85,7 +85,6 @@ const initialiseGraph = (data) => {
     }
   }
 
-  var layout = cy.layout(layoutOptions.breadthFirst);
-
+  var layout = cy.layout(layoutOptions.circle);
   layout.run();
 }

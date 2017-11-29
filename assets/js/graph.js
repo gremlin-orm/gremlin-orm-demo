@@ -84,7 +84,15 @@ const initialiseGraph = (data) => {
       padding: 50
     }
   }
-
-  var layout = cy.layout(layoutOptions.circle);
+  
+  const layout = cy.layout(layoutOptions.circle);
   layout.run();
+  
+  function handleClickView(e) {
+    const view = e.target.dataset.view;
+    const layout = cy.layout(layoutOptions[view]);
+    layout.run();
+  }
+
+  $('#dropdownView').on('click', handleClickView); 
 }

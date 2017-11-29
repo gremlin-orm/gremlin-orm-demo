@@ -2,23 +2,30 @@
 <head>
   <meta charset="UTF-8">
   <title>gremlin-orm Demo</title>
-  <link rel="stylesheet" href="./../assets/css/style.css">
+  <link rel="stylesheet" href="./../assets/css/style.css"/>
+  <link rel="stylesheet" href="./../assets/codemirror/codemirror.css"/>
+  <link rel="stylesheet" href="./../assets/codemirror/duotone-light.css"/>
+  <script src='./../assets/codemirror/codemirror.js'></script>
+  <script src='./../assets/codemirror/javascript.js'></script>
+  <script src='./../assets/codemirror/closebrackets.js'></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.6/cytoscape.min.js'></script>
   <script src='./../assets/js/graph.js'></script>
   <script src='./../assets/js/index.js'></script>
+
 </head>
 <body>
   <div class="left-pane">
     <div class="query-form clearfix">
-      <h1>gremlin-orm Demo</h1>
-      <textarea id="query" name="query" placeholder="Enter gremlin-orm query" /></textarea>
+      <img id="logo" src="./../assets/img/gremlin-orm-logo.png" alt="logo" />
+      <h1 id="header">gremlin-orm demo</h1>
+      <h2>Query</h2>
+      <textarea id="query" name="query" /></textarea>
       <button id="submit-query">Run query</button>
     </div>
     <h2>Response</h2>
-    <div class="json-response" id="json-response">
-
-    </div>
+    <pre class="json-response" id="json-response"></pre>
   </div>
   <div class="right-pane">
     <div id="container"></div>

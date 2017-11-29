@@ -35,6 +35,15 @@ body {
   background: #eee;
 }
 
+#logo {
+  width: 100px;
+  display: inline-block;
+}
+
+#header {
+  margin-bottom: 25px;
+}
+
 .right-pane {
   float: right;
   height: 100vh;
@@ -52,10 +61,15 @@ h1, h2 {
   font-size: 22px;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 textarea {
   width: 100%;
-  min-height: 400px;
+  min-height: 200px;
   font-family: monospace;
+  font-size: 16px;
   padding: 10px;
   margin-top: 15px;
   display: block;
@@ -77,9 +91,14 @@ button {
   margin-top: 10px;
   display: block;
   min-height: 200px;
-  background: #fafafa;
-  word-break: break-all;
-  font-size: 10px;
+  background: #F9F7F4;
+  font-size: 12px;
   font-family: monospace;
   padding: 10px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.CodeMirror {
+  font-size: 12px;
 }

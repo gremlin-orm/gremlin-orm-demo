@@ -4,16 +4,17 @@ $(document).ready(function() {
                                              lineNumbers: true,
                                              mode: 'javascript',
                                              autoCloseBrackets: true,
+                                             lineWrapping: true,
                                              theme: 'duotone-light'
                                            });
 
   function success(data) {
-    
+
     $('#json-response').html(JSON.stringify(data[0], null, 2));
     initialiseGraph(data);
 
   }
-  
+
   $('#submit-query').on('click', function() {
     $('#json-response').html('');
     var data = {

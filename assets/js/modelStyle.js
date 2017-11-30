@@ -1,14 +1,14 @@
 const modelStyles = {
   person: {
-    'width': '30px', 
-    'height': '30px', 
-    'shape': 'star', 
+    'width': '30px',
+    'height': '30px',
+    'shape': 'star',
     'background-color': '#70CDE7'
   },
   software: {
-    'width': '30px', 
-    'height': '30px', 
-    'shape': 'square', 
+    'width': '30px',
+    'height': '30px',
+    'shape': 'square',
     'background-color': '#E7707F'
   },
   create: {
@@ -16,18 +16,18 @@ const modelStyles = {
     'line-color': '#1A1A0F'
   },
   cocreate: {
-    'width': '3px', 
+    'width': '3px',
     'line-color': '#76777C',
     'line-style': 'dotted'
   },
   resultNode: {
-    'width': '70px', 
+    'width': '70px',
     'height': '70px',
     'border-color': 'red',
     'border-width' : '2px',
-    'border-style' : 'solid'   
+    'border-style' : 'solid'
   },
   resultEdge: {
-    'width': '4',  
-  }          
+    'width': '4',
+  }
 };

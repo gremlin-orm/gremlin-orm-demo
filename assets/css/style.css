@@ -20,6 +20,24 @@ body {
   height: 100vh;
 }
 
+#tooltip {
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background-color: #CCD2D5;
+  border-radius: 5px;
+  z-index: 1000;
+  text-decoration:none;
+  position:absolute;
+  top: 0;
+  left: calc(0 + 400);
+}
+
+.tooltipspan {
+
+}
+
 .clearfix::after {
     content: "";
     clear: both;

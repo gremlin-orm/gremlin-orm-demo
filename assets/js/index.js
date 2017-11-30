@@ -22,7 +22,7 @@ $(document).ready(function() {
     const errors = err.responseJSON;
     if (errors) {
       Object.keys(errors).forEach(key => {
-        errorStr += `${errors[key]} <br>`;
+        errorStr += `${JSON.stringify(errors[key])} <br>`;
       });
     } else {
       errorStr += err.responseText;

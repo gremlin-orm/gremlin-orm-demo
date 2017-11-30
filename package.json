@@ -11,7 +11,7 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
-    "gremlin-orm": "^1.1.4",
+    "gremlin-orm": "^1.1.6",
     "path": "^0.12.7"
   }
 }

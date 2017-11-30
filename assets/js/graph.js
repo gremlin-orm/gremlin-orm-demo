@@ -86,7 +86,9 @@ const initialiseGraph = (data) => {
   }
 
   cy.on('tap', 'node', function(evt){
+      console.log("evt", evt);
     addToolTip(evt.renderedPosition, evt.target.data());
+    console.log("evt.renderedPosition", evt.renderedPosition);
   });
 
   cy.on('pan', function(evt) {
@@ -104,14 +106,13 @@ const initialiseGraph = (data) => {
   function addToolTip(position, nodeData) {
     const { x, y } = position;
     const tooltip = document.getElementById('tooltip');
-    tooltip.style.left = x + 400;
+    tooltip.style.left = x;
     tooltip.style.top = y;
     tooltip.style.display = 'block';
     tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
   }
   
   const layout = cy.layout(layoutOptions.circle);
-  
   layout.run();
   
   function handleClickView(e) {

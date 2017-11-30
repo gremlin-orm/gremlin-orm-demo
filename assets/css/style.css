@@ -16,7 +16,7 @@ body {
 }
 
 #container {
-  width: calc(100vw - 400px);
+  width: calc(100vw - 500px);
   height: 100vh;
 }
 
@@ -31,7 +31,7 @@ body {
   text-decoration:none;
   position:absolute;
   top: 0;
-  left: calc(0 + 400);
+  left: 500px;
 }
 
 .tooltipspan {
@@ -46,7 +46,7 @@ body {
 
 .left-pane {
   height: 100vh;
-  width: 400px;
+  width: 500px;
   overflow: scroll;
   float: left;
   padding: 20px 20px 40px 20px;
@@ -54,18 +54,22 @@ body {
 }
 
 #logo {
-  width: 100px;
+  height: 40px;
   display: inline-block;
+  float: right;
 }
 
 #header {
   margin-bottom: 25px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .right-pane {
   float: right;
   height: 100vh;
-  width: calc(100% - 400px);
+  position: relative;
+  width: calc(100% - 500px);
 }
 
 .query-form {
@@ -100,9 +104,10 @@ button {
   padding: 8px 30px;
   background: #444;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   float: right;
+  border: none;
 }
 
 .json-response {
@@ -110,15 +115,15 @@ button {
   display: block;
   min-height: 200px;
   background: #F9F7F4;
-  font-size: 12px;
+  font-size: 15px;
   font-family: monospace;
   padding: 10px;
-  max-height: 500px;
+  max-height: calc(100vh - 550px);
   overflow: auto;
 }
 
 .CodeMirror {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* start of dropdown view */
@@ -128,7 +133,7 @@ button {
   background-color: #444;
   color: white;
   padding: 8px 16px;
-  font-size: 10px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -141,13 +146,17 @@ button {
   position: absolute;
   display: inline-block;
   z-index: 10;
+  top: 20px;
+  right: 20px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 115px;
+  min-width: 125px;
+
+  right: 0;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -155,10 +164,11 @@ button {
 
 .dropdown-content a {
   color: black;
+  margin-left: 5px;
   padding: 12px 12px;
   text-decoration: none;
   display: block;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .dropdown a:hover {background-color: #aaa}

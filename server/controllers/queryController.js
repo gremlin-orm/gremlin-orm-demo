@@ -2,7 +2,7 @@ const g = require('./../db');
 const Person = require('./../models/vertices/person');
 const Software = require('./../models/vertices/software');
 const Created = require('./../models/edges/create');
-const Cocreated = require('./../models/edges/cocreate');
+const CoCreated = require('./../models/edges/cocreate');
 
 
 const runQuery = (req, res) => {

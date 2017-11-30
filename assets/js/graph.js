@@ -109,7 +109,16 @@ const initialiseGraph = (data) => {
     tooltip.style.display = 'block';
     tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
   }
-
-  var layout = cy.layout(layoutOptions.circle);
+  
+  const layout = cy.layout(layoutOptions.circle);
+  
   layout.run();
+  
+  function handleClickView(e) {
+    const view = e.target.dataset.view;
+    const layout = cy.layout(layoutOptions[view]);
+    layout.run();
+  }
+
+  $('#dropdownView').on('click', handleClickView); 
 }

@@ -65,6 +65,7 @@ body {
 .right-pane {
   float: right;
   height: 100vh;
+  position: relative;
   width: calc(100% - 400px);
 }
 
@@ -103,6 +104,7 @@ button {
   font-size: 12px;
   font-weight: 600;
   float: right;
+  border: none;
 }
 
 .json-response {
@@ -141,6 +143,8 @@ button {
   position: absolute;
   display: inline-block;
   z-index: 10;
+  top: 20px;
+  right: 20px;
 }
 
 .dropdown-content {
@@ -148,6 +152,7 @@ button {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 115px;
+  right: 0;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;

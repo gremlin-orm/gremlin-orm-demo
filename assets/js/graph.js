@@ -62,9 +62,9 @@ const initialiseGraph = (data) => {
     cose: {
       name: 'cose',
       fit: true,
-      padding: 50,
-      nodeOverlap: 20,
-      componentSpacing: 20,
+      padding: 20,
+      nodeOverlap: 50,
+      componentSpacing: 150,
       refresh: 20,
       idealEdgeLength: 100,
       edgeElasticity: 100,

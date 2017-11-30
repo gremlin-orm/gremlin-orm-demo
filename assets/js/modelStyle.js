@@ -28,7 +28,7 @@ const modelStyles = {
   resultNode: {
     'width': '70px',
     'height': '70px',
-    'border-color': 'E83333',
+    'border-color': '#E83333',
     'border-width' : '2px',
     'border-style' : 'solid'
   },

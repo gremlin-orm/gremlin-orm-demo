@@ -59,6 +59,16 @@ const initialiseGraph = (data) => {
       avoidOverlap: true,
       spacingFactor: 1
     },
+    concentric: {
+      name: 'concentric',
+      fit: true,
+      padding: 50,
+      avoidOverlap: true,
+      spacingFactor: 1.5,
+      levelWidth: function( nodes ){
+        return 2;
+      }
+    },
     cose: {
       name: 'cose',
       fit: true,
@@ -111,11 +121,11 @@ const initialiseGraph = (data) => {
     tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
   }
 
-  const layout = cy.layout(layoutOptions.circle);
+  const layout = cy.layout(layoutOptions[view]);
   layout.run();
 
   function handleClickView(e) {
-    const view = e.target.dataset.view;
+    view = e.target.dataset.view;
     const layout = cy.layout(layoutOptions[view]);
     layout.run();
   }

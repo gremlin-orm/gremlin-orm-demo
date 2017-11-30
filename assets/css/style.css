@@ -160,6 +160,7 @@ button {
 
 .dropdown-content a {
   color: black;
+  margin-left: 5px;
   padding: 12px 12px;
   text-decoration: none;
   display: block;

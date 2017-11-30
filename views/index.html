@@ -8,6 +8,7 @@
   <script src='./../assets/codemirror/codemirror.js'></script>
   <script src='./../assets/codemirror/javascript.js'></script>
   <script src='./../assets/codemirror/closebrackets.js'></script>
+  <script>let view = 'circle';</script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.6/cytoscape.min.js'></script>
@@ -35,13 +36,13 @@
           <div id="dropdownView" class="dropdown-content">
             <a data-view="breadthFirst" href="#">Breadth First</a>
             <a data-view="circle" href="#">Circle</a>
+            <a data-view="concentric" href="#">Concentric</a>
             <a data-view="cose" href="#">Cose</a>
             <a data-view="random" href="#">Random</a>
           </div>
     </div>
     <div id="container">
       <pre id="tooltip"></pre>
-
     </div>
   </div>
 

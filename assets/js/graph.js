@@ -98,6 +98,10 @@ const initialiseGraph = (data) => {
     addToolTip(evt.renderedPosition, evt.target.data());
   });
 
+  cy.on('tap', 'edge', function(evt){
+    addToolTip(evt.renderedPosition, evt.target.data());
+  });
+
   cy.on('pan', function(evt) {
     hideToolTip()
   });

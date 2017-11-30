@@ -12,24 +12,28 @@ const modelStyles = {
     'background-color': '#E7707F'
   },
   created: {
-    'width': '1px',
+    'width': '2px',
     'line-style': 'solid',
     'line-color': '#29E8A2'
   },
   cocreate: {
-    'width': '3px',
-    'line-color': '#76777C',
+    'width': '2px',
+    'line-color': '#8598F5',
     'line-style': 'dotted'
+  },
+  knows: {
+    'width': '2px',
+    'line-color': 'purple'
   },
   resultNode: {
     'width': '70px',
     'height': '70px',
-    'border-color': 'red',
+    'border-color': 'E83333',
     'border-width' : '2px',
     'border-style' : 'solid'
   },
   resultEdge: {
     'width': '4px',
-    'line-color': '#E829AA'
+    'line-color': '#E83333'
   }
 };

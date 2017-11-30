@@ -3,6 +3,8 @@ const Person = require('./../models/vertices/person');
 const Software = require('./../models/vertices/software');
 const Created = require('./../models/edges/create');
 const CoCreated = require('./../models/edges/cocreate');
+const Knows = require('./../models/edges/knows');
+
 
 
 const runQuery = (req, res) => {

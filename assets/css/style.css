@@ -20,6 +20,24 @@ body {
   height: 100vh;
 }
 
+#tooltip {
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background-color: #CCD2D5;
+  border-radius: 5px;
+  z-index: 1000;
+  text-decoration:none;
+  position:absolute;
+  top: 0;
+  left: calc(0 + 400);
+}
+
+.tooltipspan {
+
+}
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -102,3 +120,49 @@ button {
 .CodeMirror {
   font-size: 12px;
 }
+
+/* start of dropdown view */
+
+.dropbtn {
+  margin-top: 0;
+  background-color: #444;
+  color: white;
+  padding: 8px 16px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #444;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  z-index: 10;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 115px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown a:hover {background-color: #aaa}
+
+.show {display:block;}
+
+/* end of dropdown view */

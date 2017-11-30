@@ -15,7 +15,7 @@ const initialiseGraph = (data) => {
       },
       {
         selector: 'edge',
-        style: { 'content': 'data(label)', 'width': 2 }
+        style: { 'content': 'data(label)' }
       }
     ]
   });
@@ -27,8 +27,13 @@ const initialiseGraph = (data) => {
   edgeData.forEach((edge) => {
     const edgeElem = Object.assign({}, edge);
     edgeElem.source = edge.outV;
+<<<<<<< HEAD
     edgeElem.target = edge.inV;
     cy.add( {data: edgeElem, style: modelStyles[edgeElem.label] } );
+=======
+    edgeElem.target = edge.inV;   
+    cy.add({ data: edgeElem, style: modelStyles[edgeElem.label] });
+>>>>>>> eaa9d42188da58306e54af14c91db20335d2269e
   });
 
   if (!Array.isArray(resultData)) {
@@ -85,7 +90,41 @@ const initialiseGraph = (data) => {
     }
   }
 
-  var layout = cy.layout(layoutOptions.breadthFirst);
+  cy.on('tap', 'node', function(evt){
+      console.log("evt", evt);
+    addToolTip(evt.renderedPosition, evt.target.data());
+    console.log("evt.renderedPosition", evt.renderedPosition);
+  });
 
+  cy.on('pan', function(evt) {
+    hideToolTip() 
+  });
+
+  cy.on('zoom', function(evt) {
+    hideToolTip()
+  });
+
+  function hideToolTip() {
+    document.getElementById('tooltip').style.display = 'none';
+  }
+
+  function addToolTip(position, nodeData) {
+    const { x, y } = position;
+    const tooltip = document.getElementById('tooltip');
+    tooltip.style.left = x;
+    tooltip.style.top = y;
+    tooltip.style.display = 'block';
+    tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
+  }
+  
+  const layout = cy.layout(layoutOptions.circle);
   layout.run();
+  
+  function handleClickView(e) {
+    const view = e.target.dataset.view;
+    const layout = cy.layout(layoutOptions[view]);
+    layout.run();
+  }
+
+  $('#dropdownView').on('click', handleClickView); 
 }

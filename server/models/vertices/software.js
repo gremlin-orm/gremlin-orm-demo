@@ -7,9 +7,6 @@ const Software = g.define('software', {
   },
   type: {
     type: g.STRING
-  },
-  frontEnd: {
-    type: g.BOOLEAN
   }
 });
 

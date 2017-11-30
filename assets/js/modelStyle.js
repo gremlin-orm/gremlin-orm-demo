@@ -11,9 +11,10 @@ const modelStyles = {
     'shape': 'square',
     'background-color': '#E7707F'
   },
-  create: {
-    'width': '2', 
-    'line-color': '#1A1A0F'
+  created: {
+    'width': '1px', 
+    'line-style': 'solid',
+    'line-color': '#29E8A2'
   },
   cocreate: {
     'width': '3px',
@@ -28,6 +29,13 @@ const modelStyles = {
     'border-style' : 'solid'
   },
   resultEdge: {
+<<<<<<< HEAD
     'width': '4',
   }
 };
+=======
+    'width': '4px',  
+    'line-color': '#E829AA'
+  }          
+};
+>>>>>>> eaa9d42188da58306e54af14c91db20335d2269e

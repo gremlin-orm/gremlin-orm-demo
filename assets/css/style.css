@@ -138,8 +138,9 @@ button {
 }
 
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  z-index: 10;
 }
 
 .dropdown-content {

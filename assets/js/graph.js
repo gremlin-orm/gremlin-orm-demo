@@ -2,7 +2,6 @@
 const initialiseGraph = (data) => {
 
   let resultData = data[0];
-  console.log("resultData", resultData);
   const vertexData = data[1][0];
   const edgeData = data[2][1];
 
@@ -86,9 +85,7 @@ const initialiseGraph = (data) => {
   }
 
   cy.on('tap', 'node', function(evt){
-      console.log("evt", evt);
     addToolTip(evt.renderedPosition, evt.target.data());
-    console.log("evt.renderedPosition", evt.renderedPosition);
   });
 
   cy.on('pan', function(evt) {
@@ -100,7 +97,9 @@ const initialiseGraph = (data) => {
   });
 
   function hideToolTip() {
-    document.getElementById('tooltip').style.display = 'none';
+    if ($('#tooltip').length) {
+      $('#tooltip').hide();
+    }
   }
 
   function addToolTip(position, nodeData) {

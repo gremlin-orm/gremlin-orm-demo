@@ -12,7 +12,7 @@ const modelStyles = {
     'background-color': '#E7707F'
   },
   created: {
-    'width': '1px', 
+    'width': '1px',
     'line-style': 'solid',
     'line-color': '#29E8A2'
   },
@@ -29,13 +29,7 @@ const modelStyles = {
     'border-style' : 'solid'
   },
   resultEdge: {
-<<<<<<< HEAD
-    'width': '4',
+    'width': '4px',
+    'line-color': '#E829AA'
   }
 };
-=======
-    'width': '4px',  
-    'line-color': '#E829AA'
-  }          
-};
->>>>>>> eaa9d42188da58306e54af14c91db20335d2269e

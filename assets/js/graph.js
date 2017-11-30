@@ -84,8 +84,34 @@ const initialiseGraph = (data) => {
       padding: 50
     }
   }
+
+  cy.on('tap', 'node', function(evt){
+    addToolTip(evt.renderedPosition, evt.target.data());
+  });
+
+  cy.on('pan', function(evt) {
+    hideToolTip() 
+  });
+
+  cy.on('zoom', function(evt) {
+    hideToolTip()
+  });
+
+  function hideToolTip() {
+    document.getElementById('tooltip').style.display = 'none';
+  }
+
+  function addToolTip(position, nodeData) {
+    const { x, y } = position;
+    const tooltip = document.getElementById('tooltip');
+    tooltip.style.left = x + 400;
+    tooltip.style.top = y;
+    tooltip.style.display = 'block';
+    tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
+  }
   
   const layout = cy.layout(layoutOptions.circle);
+  
   layout.run();
   
   function handleClickView(e) {

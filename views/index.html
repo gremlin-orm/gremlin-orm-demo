@@ -29,18 +29,18 @@
     <pre class="json-response" id="json-response"></pre>
   </div>
   <div class="right-pane">
+    <div class="dropdown">
+        <button onclick="dropdownBtn()" class="dropbtn">Change View</button>
+          <div id="dropdownView" class="dropdown-content">
+            <a data-view="breadthFirst" href="#">Breadth First</a>
+            <a data-view="circle" href="#">Circle</a>
+            <a data-view="cose" href="#">Cose</a>
+            <a data-view="random" href="#">Random</a>
+          </div>
+    </div>
     <div id="container">
       <pre id="tooltip"></pre>
       <!-- dropdown view menu -->
-      <div class="dropdown">
-          <button onclick="dropdownBtn()" class="dropbtn">Change View</button>
-            <div id="dropdownView" class="dropdown-content">
-              <a data-view="breadthFirst" href="#">Breadth First</a>
-              <a data-view="circle" href="#">Circle</a>
-              <a data-view="cose" href="#">Cose</a>
-              <a data-view="random" href="#">Random</a>
-            </div>
-      </div>
     </div>
   </div>
 

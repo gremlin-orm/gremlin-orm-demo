@@ -1,33 +1,33 @@
 
 const initialiseGraph = (data) => {
-  
+
   let resultData = data[0];
   console.log("resultData", resultData);
   const vertexData = data[1][0];
   const edgeData = data[2][1];
-  
+
   const cy = cytoscape({
     container: document.getElementById('container'), // container to render in
     style: [
-      { 
+      {
         selector: 'node',
         style: { 'content': 'data(name)' }
       },
-      { 
+      {
         selector: 'edge',
         style: { 'content': 'data(label)' }
       }
     ]
-  }); 
+  });
 
   vertexData.forEach((vertex) => {
     cy.add({ data: vertex, style: modelStyles[vertex.label] });
-  }); 
+  });
 
   edgeData.forEach((edge) => {
     const edgeElem = Object.assign({}, edge);
     edgeElem.source = edge.outV;
-    edgeElem.target = edge.inV;   
+    edgeElem.target = edge.inV;
     cy.add({ data: edgeElem, style: modelStyles[edgeElem.label] });
   });
 
@@ -37,12 +37,12 @@ const initialiseGraph = (data) => {
   resultData.forEach((resultItem) => {
     const elem = cy.getElementById(resultItem.id);
     if (resultItem.inV && resultItem.outV) {
-      elem.style(modelStyles.resultEdge);  
+      elem.style(modelStyles.resultEdge);
     } else {
       elem.style(modelStyles.resultNode);
     }
   });
-  
+
   var layoutOptions = {
     breadthFirst: {
       name: 'breadthfirst',
@@ -92,7 +92,7 @@ const initialiseGraph = (data) => {
   });
 
   cy.on('pan', function(evt) {
-    hideToolTip() 
+    hideToolTip()
   });
 
   cy.on('zoom', function(evt) {
@@ -111,15 +111,15 @@ const initialiseGraph = (data) => {
     tooltip.style.display = 'block';
     tooltip.innerHTML = JSON.stringify(nodeData, null, 2);
   }
-  
+
   const layout = cy.layout(layoutOptions.circle);
   layout.run();
-  
+
   function handleClickView(e) {
     const view = e.target.dataset.view;
     const layout = cy.layout(layoutOptions[view]);
     layout.run();
   }
 
-  $('#dropdownView').on('click', handleClickView); 
+  $('#dropdownView').on('click', handleClickView);
 }

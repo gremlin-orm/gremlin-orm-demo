@@ -4,6 +4,7 @@ $(document).ready(function() {
                                              lineNumbers: true,
                                              mode: 'javascript',
                                              autoCloseBrackets: true,
+                                             lineWrapping: true,
                                              theme: 'duotone-light'
                                            });
 
@@ -20,15 +21,15 @@ $(document).ready(function() {
     let errorStr = `<h4> Error ${err.status}</h4><br>`;
     const errors = err.responseJSON;
     if (errors) {
-      Object.keys(errors).forEach(key => { 
+      Object.keys(errors).forEach(key => {
         errorStr += `${errors[key]} <br>`;
-      }); 
+      });
     } else {
       errorStr += err.responseText;
     }
     $('#json-response').html(errorStr);
   }
-  
+
   $('#submit-query').on('click', function() {
     $('#json-response').html('');
     var data = {
